@@ -22,7 +22,6 @@ class Login extends Component{
             window.location.href = "./principal";
         })
         .catch((e)=>{
-            console.log(e.message)
             if(e.message === "The email address is badly formatted."){
                 mensagem.innerHTML = "Erro ao logar, revise seu e-mail!"
               }
@@ -30,6 +29,10 @@ class Login extends Component{
                 mensagem.innerHTML = "Erro ao logar, a senha é inválida"
         
               }
+              else{
+                mensagem.innerHTML = "Usuário ou senha incorretos ou não cadastradas."
+              }
+             
         })
     }
 
